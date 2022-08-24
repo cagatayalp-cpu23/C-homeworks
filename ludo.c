@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	print(ch);
 	int ilk=0;
 	int ilkk=0;
-	move(ch,&ilk,copych,bldc,grdc,yldc,rddc,&ilkk,&ilk,&ilk,pawn);//baþlangýç için zarlara rastgele deðerler verdim
+	move(ch,&ilk,copych,bldc,grdc,yldc,rddc,&ilkk,&ilk,&ilk,pawn);//baÃ¾langÃ½Ã§ iÃ§in zarlara rastgele deÃ°erler verdim
 	return 0;
 }
 
@@ -108,13 +108,13 @@ void menu(char *ch[100][100])
 }
 void copy(char *ch[100][100],char **copych[100],int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,int n9,int n10,int n11,int n12,int n13,int n14,int n15,int n16,int n17,int n18,int n19,int n20,int n21,int n22,int n23,int n24,int n25,int n26,int n27,int n28,int n29,int n30,int n31,int n32,int n33,int n34,int n35,int n36,int n37,int n38,int n39,int n40,int n41,int n42,int n43,int n44)
 {
-	copych[n1]=&ch[0][3];//Her renk kendi sýrasý geldiðinde 1 den 35 e kadar sýralandý bu sayede teker teker deðiþmek yerine gelen zarýn üstüne ekleyerek hareket iþlemi yaptým 
+	copych[n1]=&ch[0][3];//Her renk kendi sÃ½rasÃ½ geldiÃ°inde 1 den 35 e kadar sÃ½ralandÃ½ bu sayede teker teker deÃ°iÃ¾mek yerine gelen zarÃ½n Ã¼stÃ¼ne ekleyerek hareket iÃ¾lemi yaptÃ½m 
 	copych[n2]=&ch[1][3];
 	copych[n3]=&ch[2][3];
 	copych[n4]=&ch[3][3];
 	copych[n5]=&ch[3][2];
 	copych[n6]=&ch[3][1];
-	copych[n7]=&ch[3][0];//Baþka bir pointerin(*ch) deðerini tutmak için copych nin iki pointerin iþareti almasý gerekti ve zar atarken sýralý olmasý iþime yarayacaðý için ayrýyeten sýralý diziye kaydettim. Her renkte de sýra yenilendi.
+	copych[n7]=&ch[3][0];//BaÃ¾ka bir pointerin(*ch) deÃ°erini tutmak iÃ§in copych nin iki pointerin iÃ¾areti almasÃ½ gerekti ve zar atarken sÃ½ralÃ½ olmasÃ½ iÃ¾ime yarayacaÃ°Ã½ iÃ§in ayrÃ½yeten sÃ½ralÃ½ diziye kaydettim. Her renkte de sÃ½ra yenilendi.
 	copych[n8]=&ch[4][0];
 	copych[n9]=&ch[5][0];
 	copych[n10]=&ch[5][1];
@@ -224,16 +224,16 @@ void move(char *ch[100][100],int *count1,char **copych[100],int bldc,int grdc,in
 		if(bldc==6)
 		{
 	    	
-			    copy(ch,copych,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,60,61,63,64,65,66,67,68,69);// mavi için 1 35 arasý sýralandý 32 33 34 35 yuva yerleri, 60 gibi yüksek sayýlar ise boþ kalmamasý için  
+			    copy(ch,copych,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,60,61,63,64,65,66,67,68,69);// mavi iÃ§in 1 35 arasÃ½ sÃ½ralandÃ½ 32 33 34 35 yuva yerleri, 60 gibi yÃ¼ksek sayÃ½lar ise boÃ¾ kalmamasÃ½ iÃ§in  
 				char decision[10];
 				char pawn[10];
-		    	printf("if you want to add pawn to the game type addpawn   or if you want to move the pawn type movepawn: ");//6 geldiðinde addpawn yazarsa piyonu oyuna sokar movepawn yazarsa oyundaki piyonu oynar.
+		    	printf("if you want to add pawn to the game type addpawn   or if you want to move the pawn type movepawn: ");//6 geldiÃ°inde addpawn yazarsa piyonu oyuna sokar movepawn yazarsa oyundaki piyonu oynar.
 				scanf("%s",decision);
 				printf("\n");
 				
 				if(strcmp(decision,"addpawn")==0)
 				{
-					printf("Which pawn?");// oynayacaðý piyon seçilir
+					printf("Which pawn?");// oynayacaÃ°Ã½ piyon seÃ§ilir
 					scanf("%s",pawn);
 					int num1=1;
 					int num2=70;
@@ -260,7 +260,7 @@ void move(char *ch[100][100],int *count1,char **copych[100],int bldc,int grdc,in
 		if(player==4||player==3||player==2)
 		{
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),   FOREGROUND_RED | BACKGROUND_RED|BACKGROUND_BLUE|BACKGROUND_GREEN);
-	    printf("Its Red turn,throw the dice:");//ayný iþlemler sýrayla diðer taþlara uygulanýr
+	    printf("Its Red turn,throw the dice:");//aynÃ½ iÃ¾lemler sÃ½rayla diÃ°er taÃ¾lara uygulanÃ½r
 	    getch();
 		rddc=dice();
 		printf("%i\n",rddc);
@@ -272,7 +272,7 @@ void move(char *ch[100][100],int *count1,char **copych[100],int bldc,int grdc,in
 		}
 		if(rddc==6)
 		{
-		    copy(ch,copych,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,1,2,3,4,5,6,7,8,60,61,62,33,34,35,64,74,75,76,77,78);//red için sýralandý
+		    copy(ch,copych,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,1,2,3,4,5,6,7,8,60,61,62,33,34,35,64,74,75,76,77,78);//red iÃ§in sÃ½ralandÃ½
 			
 	            char decision[10];
 				char pawn[10];
@@ -321,7 +321,7 @@ void move(char *ch[100][100],int *count1,char **copych[100],int bldc,int grdc,in
 		}
 		if(grdc==6)
 		{
-	    copy(ch,copych,25,26,27,28,29,30,31,32,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,60,61,62,63,74,75,33,34,35,76,77,78);//green için sýralandý maviyi 1-35 sýralý seçtim diðerlerinin de ona göre alacaðý piyonlari belirledim
+	    copy(ch,copych,25,26,27,28,29,30,31,32,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,60,61,62,63,74,75,33,34,35,76,77,78);//green iÃ§in sÃ½ralandÃ½ maviyi 1-35 sÃ½ralÃ½ seÃ§tim diÃ°erlerinin de ona gÃ¶re alacaÃ°Ã½ piyonlari belirledim
 	     char decision[10];
 				char pawn[10];
 				printf("if you want to add pawn to the game type addpawn   or if you want to move the pawn type movepawn: ");
@@ -369,7 +369,7 @@ void move(char *ch[100][100],int *count1,char **copych[100],int bldc,int grdc,in
 		}
 		if(yldc==6)
 		{
-	            copy(ch,copych,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,60,61,62,63,74,75,76,77,78,33,34,35);//yellow için sýralandý
+	            copy(ch,copych,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,60,61,62,63,74,75,76,77,78,33,34,35);//yellow iÃ§in sÃ½ralandÃ½
 	            char decision[10];
 				char pawn[10];
 				printf("if you want to add pawn to the game type addpawn   or if you want to move the pawn type movepawn: ");
@@ -418,7 +418,7 @@ void moveforred(char *ch[100][100],char **copych[100],int *dice,int t,int i)
 	 copy(ch,copych,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,1,2,3,4,5,6,7,8,60,61,62,33,34,35,64,74,75,76,77,78);
 	int k=0;
 	i=1;
-	while(i<36&&k==0)//k  arttýðýnda diziden çýkmasý için while döngüsü açtým çünkü bir kere yazdýrýnca diðer turlarda bloklara girmeyip diziden çýkmasý gerek yoksa while bitene kadar birkaç kere yazdýrma yapýlýyor ve yerler deðiþiyor
+	while(i<36&&k==0)//k  arttÃ½Ã°Ã½nda diziden Ã§Ã½kmasÃ½ iÃ§in while dÃ¶ngÃ¼sÃ¼ aÃ§tÃ½m Ã§Ã¼nkÃ¼ bir kere yazdÃ½rÃ½nca diÃ°er turlarda bloklara girmeyip diziden Ã§Ã½kmasÃ½ gerek yoksa while bitene kadar birkaÃ§ kere yazdÃ½rma yapÃ½lÃ½yor ve yerler deÃ°iÃ¾iyor
 	{
 	        
 		if((strcmp(*copych[i],"R1")==0)||(strcmp(*copych[i],"R2")==0)||(strcmp(*copych[i],"R3")==0)||(strcmp(*copych[i],"R4")==0))
@@ -436,7 +436,7 @@ void moveforred(char *ch[100][100],char **copych[100],int *dice,int t,int i)
         		{
         			t=35;
 				}
-				if((*dice+i)==34)// 32 33 34 35 yuvalarýn deðerleri
+				if((*dice+i)==34)// 32 33 34 35 yuvalarÃ½n deÃ°erleri
         		{
         			t=34;
 				}
@@ -448,10 +448,10 @@ void moveforred(char *ch[100][100],char **copych[100],int *dice,int t,int i)
         		{
         			t=35;
 				}
-				//yukarýdaki iþlemler t nin yani piyonla yeri deðiþecek olanýn sayýsýný veriyor  baþka bir piyonla mý yoksa (__) yani boþlukla mý yeri deðiþecek ona göre kontrol yaptým 
+				//yukarÃ½daki iÃ¾lemler t nin yani piyonla yeri deÃ°iÃ¾ecek olanÃ½n sayÃ½sÃ½nÃ½ veriyor  baÃ¾ka bir piyonla mÃ½ yoksa (__) yani boÃ¾lukla mÃ½ yeri deÃ°iÃ¾ecek ona gÃ¶re kontrol yaptÃ½m 
 				
 		
-	    	if((strcmp(*copych[t],"__")==0)||(strcmp(*copych[t],"__")==0)||(strcmp(*copych[t],"__")==0)||(strcmp(*copych[t],"__")==0))//piyonla boþluðun yeri deðiþecekse buraya giriyor
+	    	if((strcmp(*copych[t],"__")==0)||(strcmp(*copych[t],"__")==0)||(strcmp(*copych[t],"__")==0)||(strcmp(*copych[t],"__")==0))//piyonla boÃ¾luÃ°un yeri deÃ°iÃ¾ecekse buraya giriyor
 	    	{
 	    
                 	char *tmp43;
@@ -471,7 +471,7 @@ void moveforred(char *ch[100][100],char **copych[100],int *dice,int t,int i)
 				
 				if(strcmp(*copych[t],"__")!=0)
 				{
-				if(strcmp(*copych[i],"__")!=0)//piyonla piyonun yeri deðiþecekse ve bir piyon yenecekse bura giriyor
+				if(strcmp(*copych[i],"__")!=0)//piyonla piyonun yeri deÃ°iÃ¾ecekse ve bir piyon yenecekse bura giriyor
 				{
 					
 					int count10=0;
@@ -1119,7 +1119,7 @@ void welcome()
 "8. A piece could move forward even if there is a piece of any opponent on its way."
 "9. If a piece stops at the same place of another piece of the same player, the player is not allowed to move it. He/she should wait for his/her next turn.\n"
 "10.Nobody could hurt a piece if it reaches at the final destination except the last one.\n"
-"11. If any piece could reach to the location of another players’ piece, the piece should return to its nest.But if its happening when a piece is trying to get in the game, the piece which is trying to get in the game can not move and cant eat that another piece\n"
+"11. If any piece could reach to the location of another playersÂ’ piece, the piece should return to its nest.But if its happening when a piece is trying to get in the game, the piece which is trying to get in the game can not move and cant eat that another piece\n"
 "12. The player whose all 4 pieces reach at final destination becomes the WINNER.\n "
 "13.If a piece is trying to get into the game, the place to move(starting place) must empty.  \n"
 "14. Every time, the  to be moved piece of the same player is the one that being behind.");
